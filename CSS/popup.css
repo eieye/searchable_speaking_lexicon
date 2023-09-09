@@ -1,0 +1,111 @@
+/* SELECT-SWITCH WIDGET // "DARK MODE" // 04-DEZ-21 */
+/* PART OF "BEZIER DEMO // SUN 03-APR-22 */
+/* PART OF "QUERY LEXICON" // FRI 03-FEB-23 */
+/* REMOVED "DONT SHOW AGAIN" MECHANISM // WED 01-MAR-23 */
+
+/* FRI 12-MAY-23 */
+/* (##TBD## SHADOW ROOT?)
+
+
+
+
+
+
+
+
+
+																					/* HELP BOX */
+/* TOGGLE-ABLE LAYER */
+.overlay {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 10;
+	display: flex; 																																					/* INIT "OVERLAY" */
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(60 60 60 / .5); /** DIMMER */
+	border: 0px dotted red;
+}
+.hide {
+	display: none;																																					/* CHAIN "OVERLAY HIDE" */
+}
+
+/* ALERT CONTENT BOX */
+.helpbox {
+	background-color: rgba(255 255 255 / .95); /** BACKGROUND MSG */
+	border: 0px dashed cyan; /* KEEP FOR DEBUGGING */
+	padding: 25px 50px 25px 50px; /* TRBL */
+	margin: 0px 25px 0px 25px;
+	border-radius: 3px;
+	cursor: default;
+	width: 70%;
+	/*user-select: none;*/ /* NO TXT HI-LIGHTING */
+}
+
+/* HELP-TEXT */
+.helptext {
+	font-size: 1rem; 				/* .85rem */
+	line-height: 1.5rem; 		/* 1.3rem */
+	color: var(--helptxt);
+	/* word-break: normal; */ /* DEFAULT */
+}
+
+.helptext a {
+	text-decoration: none;
+}
+
+.headline {
+	display: flex;
+	justify-content: center;
+	color: var(--uiprompts);
+	border: 0px solid blue;
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+																				/* HELP FOOTER BTN */
+/* FOOTER */	
+.inhelpcontent {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0px;																															/** ##TEMP## BUILD A ROBUST TXT-BTN TABLE/GRID */
+	padding-top: 20px;
+	border: 0px dashed red; /* KEEP FOR DEBUGGING */
+}
+
+/* SQUARE BTN */
+/* FONT SPECS INHERIT FROM "BODY" */
+.customsquarebtn {
+			/* BOX */
+  width: 80px;
+  height: 40px;
+	border-radius: 3px;
+	margin: 0px 20px 0px 20px;
+  background-color: rgba(50 50 255 / 1);
+	cursor: pointer;
+	display: flex;
+			/* TYPE */	
+	align-items: center;
+	justify-content: center;
+  color: white;
+	font-weight: 600;
+	user-select: none; /* NO TXT HI-LIGHTING/SELECTING/INSERT */
+}
+
+/* TOO SUBTLE
+.customsquarebtn:hover {
+	background-color: rgba(0 0 150 / 1);
+}
+*/
+
+
+
+
+
+
+
+
+
+

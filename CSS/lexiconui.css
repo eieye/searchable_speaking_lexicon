@@ -1,0 +1,205 @@
+/* SELECT-SWITCH WIDGET // "DARK MODE" // 04-DEZ-21 */
+/* PART OF "BEZIER DEMO // SUN 03-APR-22 */
+/* PART OF "QUERY LEXICON" // SUN 05-FEB-23 */
+
+/* MODIFIED TUE 30-MAY-23 */
+
+
+
+
+
+
+																				/* SHARED COLORS */
+:root {
+/* TEXT */
+	--uitxt:			red;
+	--uiprompts:	blue;
+	--helptxt:		gray;
+	--resultstxt: purple;
+	--comtxt:			purple;
+}
+
+
+																				/* PAGE CONTENT */
+
+body {
+  padding: 0;
+	margin: 0;
+	background: rgba(240 240 240 / 1);
+	font: 1em / 1.5 'Menlo', system-ui, Arial, sans-serif;
+	font-weight: 400; /* 700 IS SEMIBOLD */
+	letter-spacing: 0.5px;
+	user-select: none;
+}
+
+alert {
+	background: rgba(240 240 240 / 1);
+	font: 1em / 1.5 'Menlo', system-ui, Arial, sans-serif;
+	font-weight: 400; /* 700 IS SEMIBOLD */
+	letter-spacing: 0.5px;
+	user-select: none;
+}
+
+
+
+																			/* WRAPPER AND OVERLAY */
+.page_wrapper {
+  display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	height: 100%;
+	border: 1px solid red;
+}
+.column-left {
+	flex: 1 0 50%;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 0px dashed rgb(0, 0, 255);
+}
+.column-right {
+	flex: 1 0 50%;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 0px dashed rgb(0, 0, 255);
+	background: rgba(255 240 240 / 1);
+}
+@media screen and (max-width: 800px) {
+	.container {
+		flex-direction: column;
+	}
+	.column-left, .column-right {
+		flex: 1 0 auto;
+		max-width: none;
+	}
+}
+
+
+																					/* UI-TEXT */
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: var(--uiprompts);
+}
+strong {
+	font-weight: 600;
+	font-style: italic;
+}
+div.resultstxt {
+	white-space: pre;
+	tab-size: 16;
+	overflow: auto;
+	color: var(--resultstxt);
+}
+.resultstxt a {
+	text-decoration: none;
+	color: var(--resultstxt);
+}
+
+.resnum {
+	color: var(--uitxt);
+}
+.filestatus {
+	color: var(--uitxt);
+		/* BREAKS AT WORDS ONLY */
+	/*overflow-wrap: anywhere;*/
+		/* BREAKS ANYWHERE */
+	word-break: break-all;
+}
+.filesize {
+	color: var(--uitxt);
+}
+.querystatus {
+	color: var(--uitxt);
+}
+.comment {
+	color: var(--comtxt);
+	line-break: auto; /* (CJK) */
+}
+
+
+																				/* QUERY WIDGETS */
+
+/* TEXT ENTERED */
+input {
+	color: var(--uitxt);
+}
+select {
+	font: 1em / 1.5 'Menlo', system-ui, Arial, sans-serif;
+	font-weight: 400; 
+	color: var(--uitxt);
+	padding: 5px;
+	background-color: white;
+	border: 3px dashed white; /* "PADDING" TYPE */
+	border-radius: none;
+}
+.custominput {
+	padding: 6px;
+	font: 1em / 1.5 'Menlo', system-ui, Arial, sans-serif;
+	font-weight: 400;
+	border: 0px dashed gray;
+}
+
+
+																		/* CUSTOM PILL-BUTTONS */
+/* SAVE-BTN FOOTER */
+.btncontainer {
+	display: flex; /* THIS SETS WIDTH TO TYPE WIDTH */
+	justify-content: left;
+	border: 0px dashed green;
+	margin: 0 0 0 0;
+}
+.custompillbtn {
+	width: auto; /* THIS SETS WIDTH TO TYPE WIDTH */
+	height: 42px;
+	padding: 0px 20px 0px 20px; /* TRBL */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: blue;
+	background-color: white;
+	border: 0px solid blue;
+	border-radius: 21px;
+	user-select: none;
+}
+.custompillbtn:hover {
+	color: white;
+	background-color: blue;
+	border: 0px solid black;
+	cursor: pointer;
+	user-select: none;
+}
+.custompillbtn:active {
+	color: white;
+	background-color: blue;
+	border: 0px solid black;
+	cursor: pointer;
+	user-select: none;
+}
+/* TEXT-LINKS */
+a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover, active {
+	color: var(--uitxt);
+}
+a:visited {
+	color: blue);
+}
+
+a#fetch {
+	text-decoration: none;
+	color: blue;
+	cursor: pointer;
+}
+a#fetch:hover, active {
+	color: var(--uitxt);
+}
+
+
+
+
+
+
+
+

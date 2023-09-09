@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SEARCH LEXICON UTILITY // #TEMP# POP-UP LEXEME-DETAILS</title>
+<!-- FRI 12-MAY-23 -->
+<!-- NEW SEARCH GROUP "SYLLABLES" -->
+<!-- FIXED COLUMN ASYMMETRY -->
+<!-- RE-ATTACHED AUDIO-LINKING -->
+<!-- SUN 14-MAY-23 -->
+<!-- CATCH ERRORS -->
+<!-- MON 15-MAY-23 -->
+<!-- PREVENT MULTIPLE LOAD LEXICON -->
+<!-- THU 18-MAY-23 -->
+<!-- UPLOAD CHANGED DIRECTORIES "PARSEIN/OUT"  -->
+<!-- UPLOAD UPDATED LEXICON -->
+<!-- CHANGED FLAG FOR "ANLAUT" IN SOURCE // ADDED LTR=PHON -->
+<!-- WED 24-MAY-23 -->
+<!-- NEW CLASS "RESULT" TO MANAGE LINK SPLITTING AND PARSING -->
+<!-- THU 25-MAY-23 -->
+<!-- ADAPTING CLASSES FOR INDIVIDUAL QUERY PARAMETERS -->
+<!-- ADDED VARIABLE SPACER FOR COLUMNS-FORMATTING -->
+<!-- FRI 26-MAY-23 -->
+			<!-- TEMP DIS-ABLED QUERIES FOR -->
+			<!-- "HIAT-H" "KVK LONG/SHORT" "FEM SORTED" -->
+
+
+
+	<link rel="stylesheet" href="./CSS/lexiconui.css"></link>
+	<link rel="stylesheet" href="./CSS/popup.css"></link>
+</head>
+
+<body onload="writeHelp('init');">
+																		<!-- WRAP TWO COLUMNS -->
+<div class="page_wrapper">
+
+
+
+<!-- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+<div class="column-left" id="query">
+
+																	<!-- FILE BROWSER INPUT-EL -->
+<p>SELECT THE SOURCE FILE (<a id="infolink">INFO</a>)...</p>
+<div class="btncontainer">
+	<label for="btnload" class="custompillbtn">Choose&nbsp;file</label>
+	<input style="display: none;" type="file" id="btnload" name="btnload" accept=".csv, .txt" onchange="loadFile();">
+</div>
+
+
+																	<!-- DISPLAY FILE STATUS -->
+<div id="filestatus" class="filestatus">nn</div>
+<div id="filesize" class="filesize">nn</div>
+
+
+
+
+																		<!-- STRING QUERIES INPUT -->
+<div>
+<p>&nbsp;</p>
+<p>ENTER A TEXT SEARCH (<a id="stringhelp">HELP</a>)</p>
+	<input class="custominput" id="txtinput" type="text" onchange="stringQuery(this.value); qcopy(this.value);" />
+</div>
+
+
+																	<!-- PHONETIC QUERIES OPTIONS -->
+<div>
+<p>&nbsp;</p>
+<p>USE PHONETIC FILTERS (<a id="phonetichelp">HELP</a>)</p>
+<!-- (ID IS UNUSED) -->
+<select id="pullone" onchange="phoneticQuery(this.value); qcopy(this.options[this.selectedIndex].label);">
+	<option value="none">(no selection)</option>
+																		<!-- REDUCED SYLLABLES -->
+	<option value="schwa">schwa</option>
+	<option value="tschwa">tiefschwa</option>
+	<option value="vokr">vokalisiertes "-r"</option>
+	<option value="ern">reduktionssilbe mit -ern</option>
+																		<!-- (TAGGED) PREFIXES -->
+	<option value="be">be-</option>
+	<option value="ge">ge-</option>
+																			<!-- (NESTED) MTBG -->
+	<option value="ch">ch</option>
+	<option value="sch">sch</option>
+	<option value="tsch">tsch</option>
+	<option value="chs">chs</option>
+																		<!-- ORTHOGRAPHEMES -->
+	<option value="dblvowel">double vowel</option>
+	<option value="longie">langes ie</option>
+	<option value="hiatie">getrenntes ie</option>
+<!--
+	<option value="hiath">silbentrennendes h</option>
+-->
+	<option value="sp">sp-</option>
+	<option value="st">st-</option>
+</select>
+</div>
+
+
+																<!-- DISTRIBUTION QUERIES OPTIONS -->
+<div>
+<p>&nbsp;</p>
+<p>SEE WORD DISTRIBUTIONS (<a id="distribhelp">ABOUT</a>)</p>
+<!-- (ID IS UNUSED) -->
+<select id="pulltwo" onchange="distributionQuery(this.value); qcopy(this.options[this.selectedIndex].label);">
+	<option value="none">(no selection)</option>
+																		<!-- INVENTORIES -->
+	<option value="all">show all entries</option>
+	<option value="statnrw">NRW</option>
+	<option value="statbb12">BBB 1-2</option>
+	<option value="statbb34">BBB 3-4</option>
+	<option value="common">gemeiner GWS</option>
+																		<!-- ANLAUTE -->
+	<option value="anlaute">"Anlautwörter"</option>
+	<option value="rank">100 most frequent</option>
+																		<!-- VOKALLÄNGE -->
+	<option value="KVK">KVK long vowel</option>
+	<option value="san1ti3">KVK short vowel</option>
+	<option value="irregular">"Lernwörter" (irregular)</option>
+																			<!-- GENDER -->
+	<option value="fem">feminine words</option>
+	<option value="femsorted">fem sorted by ending</option>
+	<option value="masc">masculine schwa ending</option>
+																		<!-- FLEX MORPHO -->
+	<option value="flexed">flexed forms</option>
+																	<!-- COMPOSITES -->
+	<option value="compound">Komposita</option>
+	<option value="mehrwort">Mehrwortausdrücke</option>
+</select>
+</div>
+
+
+																<!-- SYLLABLE QUERIES OPTIONS -->
+<div>
+<p>&nbsp;</p>
+<p>SHOW SYLLABLES (<a id="syllablehelp">ABOUT</a>)</p>
+<!-- (ID IS UNUSED) -->
+<select id="pullthree" onchange="sizeQuery(this.value); qcopy(this.options[this.selectedIndex].label);">
+	<option value="none">(no selection)</option>
+																	<!-- SYLLABLE COUNT -->
+	<option value="syll1">1 syllable</option>
+	<option value="syll2">2 syllables</option>
+	<option value="syll3">3 syllables</option>
+	<option value="syll4">more than 3 syllables</option>
+</select>
+<p>&nbsp;</p>
+</div>
+
+</div>
+<!-- END COL LEFT -->
+
+
+
+
+
+<!-- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+<div class="column-right">
+
+																		<!-- #ADDITION# 12-MAR-23 -->
+<!-- ADD "(string)..." FOR STRING QUERIES TO STATUS-LINE -->
+<!-- TO DIFF FROM FIXED OPTIONS (EG "SCH") -->
+																		<!-- REPEAT QUERY STRING -->
+<div id="querystatus" class="querystatus"> <!-- LINE #150# -->
+nn
+</div>
+																	 	 <!-- RESULTS COUNT -->
+<div>
+<p id="resnum" class="resnum">nn</p>
+</div>
+																	<!-- WRITE RESULTS TO HTML -->
+<div class="resultstxt" id="resultstxt">
+<!-- RESULTS -->
+</div>
+																	<!-- OPTIONAL MSG (COMMENT) -->
+																	<!-- ##TBD## P BREAKS DIV WIDTH -->
+<div>
+<p>&nbsp;</p>
+<p id="comment" class="comment">&nbsp;</p><!-- (!)SPACE = PLACEHOLDER -->
+</div>
+
+																<!-- EXPORT TO PLAIN TXT FILE -->
+<div>
+<p>&nbsp;</p>
+<p>SAVE RESULTS TO A TXT-FILE</p>
+</div>
+<div class="btncontainer">
+	<div class="custompillbtn" id="savetofile">save</div>
+</div>
+<p>&nbsp;</p>
+
+</div>
+<!-- END COL RIGHT -->
+
+
+</div>
+<!-- END WRAPPER -->
+
+
+
+
+
+
+
+<!-- ##TBD## HELP-BOX CONTENT ON "ONLOAD" IS A BIT LATE AND "FLASHING" -->
+<!-- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+																			<!-- HELP OVERLAY -->
+<!-- DIMMER -->
+<div class="overlay" id="overlay">
+<!-- HELP BOX -->
+	<div class="helpbox">
+																			<!-- TEXT CONTENT -->
+	<div id="textcontainer" class="helptext">
+<!-- GENERATED -->
+	</div>
+																			<!-- CLOSE HELP -->
+<!-- BTN -->
+	<div class="btncontainer inhelpcontent">
+		<div id="btnclosehelp" class="customsquarebtn">OK</div>
+	</div>
+	<p>&nbsp;</p>
+	</div>
+<!-- END HELP-BOX -->
+</div>
+<!-- END DIMMER -->
+
+
+
+
+
+
+
+<!-- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+															 <!-- SCRIPTS // KEEP THIS SEQUENCE -->
+
+<script src="./PARSEIN/csv_loadToObj.js"></script>
+<script src="./PARSEOUT/popup_help.js"></script>
+
+<script src="./PARSEIN/intermediate_phonetics.js" defer></script>
+<script src="./PARSEIN/intermediate_reducedsylbls.js" defer></script>
+<script src="./PARSEIN/texttospeech_xsampa.js" defer></script>
+
+<script src="./QUERY/string_queries.js" defer></script> <!-- NEW VAR "QTYPE" 12-MAR-23 -->
+<script src="./QUERY/phonetic_queries.js" defer></script>
+<script src="./QUERY/distribution_queries.js" defer></script>
+<script src="./QUERY/syllable_queries.js" defer></script>
+<script src="./QUERY/class_result.js"></script>
+<script src="./PARSEOUT/popup_objectInfo.js"></script>
+
+<script src="./PARSEOUT/queries_formatresults.js" defer></script>
+<script src="./PARSEOUT/savetofile.js" defer></script>
+<script src="./PARSEOUT/playaudio.js"></script>
+
+
+</body>
+</html>
+
+
