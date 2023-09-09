@@ -7,11 +7,12 @@ This md merges the copy from various "help/info/about" links in the application.
 NOTE for debugging this beta may still contain extraneous symbols/characters in search results (listings and save-out)<br>
 <br>
 
-**HOW TO USE THIS UTILITY**<br>
-If you downloaded the package, locate the file "FULL_INVENTORY_310523.csv" in the folder "DATA" on your computer and open it from the App with "Choose file".
-You can also [download](https://www.jenskreitmeyer.de/alpha/lexicon/DATA/FULL_INVENTORY_310523.csv) it (raw csv) separately ... or include (fetch) it at runtime. 
-The Lexicon source file can be re-imported into Excel and edited (with due caution).<br>
+**HOW TO USE THIS UTILITY (WITH INSTALLATION)**<br>
+To install the App download the complete content of this repository to a common folder on your drive.<br>
+Unzip the files AUDIO.zip and NUMBERS.zip inside the folder DATA.<br>
+Launch the App by opening "utility-lexicon.html" (Firefox or Chrome), then click the button "Choose File" and point your browser at "FULL_INVENTORY_310523.csv" inside the folder DATA, and open it.<br>
 
+The Lexicon source file can be re-imported into Excel and edited (with due caution).<br>
 All Lexicon entries are "speak-able items". Click on a word in the list of results to play its (pre-recored) audio. Hold the alt-key and click, to open a pop-up with the full lexeme info.<br>
 Results for any query can be downloaded to a plain text file (button "save").<br>
 <br>
