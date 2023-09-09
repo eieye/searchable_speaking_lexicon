@@ -9,8 +9,9 @@ NOTE for debugging this beta may still contain extraneous symbols/characters in 
 
 **HOW TO USE THIS UTILITY**<br>
 If you downloaded the package, locate the file "FULL_INVENTORY_310523.csv" in the folder "DATA" on your computer and open it from the App with "Choose file".
-You can also [download](https://www.jenskreitmeyer.de/alpha/lexicon/DATA/FULL_INVENTORY_310523.csv) it separately ... (or fetch it at runtime)<br>
+You can also [download](https://www.jenskreitmeyer.de/alpha/lexicon/DATA/FULL_INVENTORY_310523.csv) it separately ... (or fetch it at runtime). 
 The Lexicon source file can be re-imported into Excel and edited (with due caution).<br>
+
 All Lexicon entries are "speak-able items". Click on a word in the list of results to play its (pre-recored) audio. Hold the alt-key and click, to open a pop-up with the full lexeme info.<br>
 Results for any query can be downloaded to a plain text file (button "save").<br>
 <br>
@@ -20,8 +21,8 @@ The current Lexicon (if not yet loaded, locate and open it with the "choose file
 [Schulentwicklung NRW Grundwortschatz](https://www.schulentwicklung.nrw.de/cms/grundwortschatz-nrw/grundwortschatz/wortfilter/index.html) (533 entries)
 and [Grundwortschatz Berlin-Brandenburg Klasse 1-2 und 3-4](https://bildungsserver.berlin-brandenburg.de/deutsch-grundschule) (about 700 entries), with some overlap.<br>
 
-It has been expanded by another 1000 entries specifically for German as a Second Language (DaZ), focusing on foundational schema-representative words (establishing vowel quality/length and "Lautprinzip") and derivatives (illustrating morphologic/orthographic constancy or "Stammprinzip").<br>
-As a guide, syllables that deviate from regular basic phonetic transcription are indicated by *kursive type*. In the current distribution these constitute less than 10% of the inventory.<br>
+It has been expanded by another 1000 entries specifically for German as a Second Language (DaZ), focusing on foundational schema-representative words (establishing vowel quality/length and "Lautprinzip") and derivatives (illustrating morphologic/orthographic constancy or "Stammprinzip"). 
+As a guide, syllables that deviate from regular basic phonetic transcription are indicated by *kursive* type. In the current distribution these constitute less than 10% of the inventory.<br>
 <br>
 
 **SEARCHING FOR PATTERNS (ENTER A TEXT SEARCH)**<br>
