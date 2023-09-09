@@ -9,7 +9,7 @@ NOTE for debugging this beta may still contain extraneous symbols/characters in 
 
 **HOW TO USE THIS UTILITY**<br>
 If you downloaded the package, locate the file "FULL_INVENTORY_310523.csv" in the folder "DATA" on your computer and open it from the App with "Choose file".
-You can also [download](https://www.jenskreitmeyer.de/alpha/lexicon/DATA/FULL_INVENTORY_310523.csv) it separately ... (or fetch it at runtime). 
+You can also [download](https://www.jenskreitmeyer.de/alpha/lexicon/DATA/FULL_INVENTORY_310523.csv) it (raw csv) separately ... or include (fetch) it at runtime. 
 The Lexicon source file can be re-imported into Excel and edited (with due caution).<br>
 
 All Lexicon entries are "speak-able items". Click on a word in the list of results to play its (pre-recored) audio. Hold the alt-key and click, to open a pop-up with the full lexeme info.<br>
