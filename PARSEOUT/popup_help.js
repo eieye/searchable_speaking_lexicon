@@ -14,7 +14,8 @@
 			// MAKE POP_UP BOX SCROLLABLE (OR SHOW OVERFLOW)
 // SAT 20-MAY-23
 			// PERMALINK NAME FOR IMPORT
-
+// SUN 10-SEP-23
+			// SIZE HELP POP-UP TO FIT SCREEN ON MOBILE
 // ________________________________________ #TBD# LEGAL ___________________________________________
 // |                                                                                               |
 //      For general info see repository "pattern-based instruction" at 
@@ -32,7 +33,7 @@
 
 
 // TEMP
-console.log("#SEARCH_HELP# TUE 30-MAY-23\n\n");
+console.log("#SEARCH_HELP# SUN 10-SEP-23\n\n");
 
 
 
@@ -77,8 +78,7 @@ function writeHelp(arg) {
 		let distribstr =
 '<span class="headline">SYLLABLES AND MULTI-PART ITEMS</span><br>'
 + 'List lexicon entries by number of syllables.<br>'
-+ 'Syllables are indicated by \"·\" (middot) delimiter. Syllabic (long) vowels are separated by \":\" (colon) but do not represent an orthographic hyphenation.<br>'
-+ '';
++ 'Syllables are indicated by \"·\" (middot) delimiter. Syllabic (long) vowels are separated by \":\" (colon) but do not represent an orthographic hyphenation.';
  // ##TEMP##
 		textcontainer.innerHTML = distribstr;
 		openHelp("OK");
@@ -92,8 +92,7 @@ function writeHelp(arg) {
 + '(short/long/short) in most syllables (and thus words)... Discover the distribution of female resp. male words ending on "-e" (schwa)...<br>&nbsp;<br>'
 // + "('a' standing in for any single vowel or umlaut and 'k' (most distinctive and unmutable plosive) for any consonant.<br>&nbsp;<br>"
 + 'A selection of composite words and short phrases is also available.<br>'
-+ 'In "show all entries" nouns will be listed with their article (gender).<br>'
-+ '';
++ 'In "show all entries" nouns will be listed with their article (gender).';
  // ##TEMP##
 		textcontainer.innerHTML = distribstr;
 		openHelp("OK");
@@ -104,8 +103,7 @@ function writeHelp(arg) {
 '<span class="headline">PHONETIC FILTERS</span><br>'
 + 'Get exact matches for specific phonetic and orthographic features with exclusive searches (i.e. "ch" not in "sch" not in "tsch").<br>&nbsp,<br>'
 + 'Patterns like ch sch tsch and schwa/tiefschwa (-e -er) and orthographic markers ("ie", "-h-") '
-+ 'are pre-configured for exclusive matching: Find "-e" (but not "-ee"), "ie" (but not "i&euml;"), "st-" (but not "-st") and more ...'
-+ '';
++ 'are pre-configured for exclusive matching: Find "-e" (but not "-ee"), "ie" (but not "i&euml;"), "st-" (but not "-st") and more ...';
  // ##TEMP##
 		textcontainer.innerHTML = selectstr;
 		openHelp("OK");
@@ -124,7 +122,7 @@ function writeHelp(arg) {
 + 'For a positional search add a hyphen <i>after</i> the string to find words "starting with ..." (e.g. sch- sp- st-),&nbsp;'
 + 'add a hyphen <i>before</i> the string to find words "ending with ..." (e.g. -ig -em -tte).<br>'
 + 'This is useful for finding "Auslautverhärtung" (-b -d -g -s), affixes (e.g. be- ge- ver- -lich -ung), morphemes (e.g. -en -st) and some more (-and).<br>&nbsp;<br>'
-+ 'The search is case in(!)sensitive.';
++ 'The search is case in(!)sensitive. Press "enter" to start search, then scroll to list of results.';
 
 // ##TEMP##
 		textcontainer.innerHTML = stringstr;
@@ -141,7 +139,7 @@ function writeHelp(arg) {
 + 'and "<a href="https://bildungsserver.berlin-brandenburg.de/deutsch-grundschule" target="_blank">Grundwortschatz Berlin-Brandenburg Klasse 1-2 und 3-4</a>" (about 700 entries), with some overlap.<br>&nbsp;<br>'
 + 'It has been expanded by another 1000 entries specifically for German as a Second Language (DaZ), focusing on foundational schema-representative words (establishing vowel quality/length and \"Lautprinzip\") and derivatives (illustrating morphologic\/orthographic constancy or \"Stammprinzip\").<br>&nbsp;<br>'
 + 'As a guide, syllables that deviate from regular basic phonetic transcription are indicated by <i>kursive type</i>.<br>'
-+ 'In the current distribution these constitute barely 10% of the inventory.';
++ 'In the current distribution these constitute less than 10% of the inventory.';
 
 		// ##TEMP## REPLACE "INNER_HTML" WITH PROPER APPEND
 		// ##TBD## INTIAL LOAD OF HELP-BOX VERY SLOW (!?)
@@ -167,9 +165,8 @@ function writeHelp(arg) {
 + 'You can also <a href="https://www.jenskreitmeyer.de/alpha/lexicon/DATA/' + permalink + '">download it separately</a> or <a id="fetch" onclick="fetchDataCSV()">directly import the data</a>.&nbsp;'
 + 'The Lexicon source file can be re-imported into Excel and edited (with due caution).<br>&nbsp;<br>'
 + 'All Lexicon entries are "speak-able items". Click on a word in the list of results to play its (pre-recored) audio. Hold the alt-key and click, to open a pop-up with the full lexeme info.<br>&nbsp;<br>'
-//+ 'If you want to work offline with the audio download the files <a href="https://www.jenskreitmeyer.de/alpha/lexicon/DATA/Archiv.zip">here</a> (12 MB).<br>&nbsp;<br>'
-+ 'Results for any query can be downloaded to a plain text file.<br>&nbsp;<br>';
-//+ 'For more instructions and help, click the respective text links in the user interface.<br>&nbsp;<br>';
++ 'Results for any query can be downloaded to a plain text file.';
+
 // ##TEMP##
 		textcontainer.innerHTML = initstr;
 		openHelp("OK");
