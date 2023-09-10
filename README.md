@@ -3,7 +3,7 @@ search utility for patterns and phonetics in a basic German vocabulary (2266 ent
 
 
 [RUN DEMO](https://www.jenskreitmeyer.de/alpha/lexicon/utility_lexicon.html)<br>
-Best viewed in desktop browser (Firefox or Chrome) with touch-simulation.
+Best viewed in desktop browser (Firefox or Chrome).
 NOTE demo has some extraneous symbols/characters in search results for debugging<br>
 <br>
 
