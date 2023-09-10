@@ -101,7 +101,7 @@ function writeHelp(arg) {
 																			// HELP PHONETIC QUERIES
 		let selectstr =
 '<span class="headline">PHONETIC FILTERS</span><br>'
-+ 'Get exact matches for specific phonetic and orthographic features with exclusive searches (i.e. "ch" not in "sch" not in "tsch").<br>&nbsp,<br>'
++ 'Get exact matches for specific phonetic and orthographic features with exclusive searches (i.e. "ch" not in "sch" not in "tsch").<br>&nbsp;<br>'
 + 'Patterns like ch sch tsch and schwa/tiefschwa (-e -er) and orthographic markers ("ie", "-h-") '
 + 'are pre-configured for exclusive matching: Find "-e" (but not "-ee"), "ie" (but not "i&euml;"), "st-" (but not "-st") and more ...';
  // ##TEMP##
