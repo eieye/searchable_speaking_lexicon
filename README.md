@@ -3,8 +3,8 @@ search utility for patterns and phonetics in a basic German vocabulary (2266 ent
 
 
 [RUN DEMO](https://www.jenskreitmeyer.de/alpha/lexicon/utility_lexicon.html)<br>
-This md merges the copy from various "help/info/about" links in the application.
-NOTE for debugging this beta may still contain extraneous symbols/characters in search results (listings and save-out)<br>
+Best viewed in desktop browser (Firefox or Chrome) with touch-simulation.
+NOTE demo has some extraneous symbols/characters in search results for debugging<br>
 <br>
 
 **HOW TO USE THIS UTILITY (WITH INSTALLATION)**<br>
