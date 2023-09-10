@@ -5,7 +5,7 @@
 
 /* FRI 12-MAY-23 */
 /* (##TBD## SHADOW ROOT?)
-
+/* 10-SEP-23 ALLOW SCROLL-Y POPUPS */
 
 
 
@@ -23,23 +23,17 @@
 	display: flex; 																																					/* INIT "OVERLAY" */
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(60 60 60 / .5); /** DIMMER */
+	background-color: rgba(60 60 60 / .5); /* DIMMER */
 	border: 0px dotted red;
 }
 .hide {
 	display: none;																																					/* CHAIN "OVERLAY HIDE" */
 }
 
-/* ALERT CONTENT BOX */
+/* CONTAINER HELPTEXT AND CLOSE-BTN */
 .helpbox {
-	background-color: rgba(255 255 255 / .95); /** BACKGROUND MSG */
-	border: 0px dashed cyan; /* KEEP FOR DEBUGGING */
-	padding: 25px 50px 25px 50px; /* TRBL */
-	margin: 0px 25px 0px 25px;
-	border-radius: 3px;
-	cursor: default;
-	width: 70%;
-	/*user-select: none;*/ /* NO TXT HI-LIGHTING */
+	background-color: none; /* OFF-WHITE FROM "OPTIONBOX" */
+	border: 0px dashed cyan;
 }
 
 /* HELP-TEXT */
@@ -48,6 +42,9 @@
 	line-height: 1.5rem; 		/* 1.3rem */
 	color: var(--helptxt);
 	/* word-break: normal; */ /* DEFAULT */
+	border: 0px dashed cyan;
+	cursor: default;
+	/* touch-action: none; */ /* ALLOW SCROLLING(!) */
 }
 
 .helptext a {
@@ -62,8 +59,34 @@
 }
 
 
+
 /* --------------------------------------------------------------------------------------------- */
-																				/* HELP FOOTER BTN */
+														/* NEW (100923) SCROLLING CONTENT POPUP */
+
+.optionbox {
+	background-color: rgba(252 252 252 / 1); /* OFF-WHITE */
+	border: 0px dashed yellow;
+																	/* LESS IS MORE FOR MOBILE */
+	padding: 25px 15px 0px 18px; /* TRBL */
+	margin: 0px 25px 0px 25px; /* NOT EFFECTIVE UNLESS WIDTH 100% */
+	border-radius: 5px;
+	cursor: default;
+
+	display: flex;
+	width: 90vw; /* max-width */
+	max-height: 90vh;
+
+	/*user-select: none;*/ /* NO TXT HILIGHTING */
+	/* touch-action: none; */
+	overflow-y: scroll;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+																				/* HELP FOOTER BUTTON */
 /* FOOTER */	
 .inhelpcontent {
 	position: relative;
@@ -72,13 +95,13 @@
 	justify-content: center;
 	top: 0px;																															/** ##TEMP## BUILD A ROBUST TXT-BTN TABLE/GRID */
 	padding-top: 20px;
-	border: 0px dashed red; /* KEEP FOR DEBUGGING */
+	padding-bottom: 28px;
+	border: 0px dashed red;
 }
 
-/* SQUARE BTN */
-/* FONT SPECS INHERIT FROM "BODY" */
+/* SQUARE BTN // FONT SPECS INHERIT FROM "BODY" */
 .customsquarebtn {
-			/* BOX */
+/* BOX */
   width: 80px;
   height: 40px;
 	border-radius: 3px;
@@ -86,26 +109,11 @@
   background-color: rgba(50 50 255 / 1);
 	cursor: pointer;
 	display: flex;
-			/* TYPE */	
+/* TYPE */	
 	align-items: center;
 	justify-content: center;
   color: white;
 	font-weight: 600;
-	user-select: none; /* NO TXT HI-LIGHTING/SELECTING/INSERT */
+	user-select: none;
 }
-
-/* TOO SUBTLE
-.customsquarebtn:hover {
-	background-color: rgba(0 0 150 / 1);
-}
-*/
-
-
-
-
-
-
-
-
-
 
